@@ -1,0 +1,31 @@
+// Liapunov Exponent.cpp : Defines the entry point for the console application.
+//
+
+#include "Formatting.h"
+
+int main()
+{
+	/*double d = pow(10,-10);
+	double mt = 200.0;
+	int n = 4;
+	int t = 1;
+	bool xy = Y;
+	double unb;
+	double upb = 0.25;
+	int res = 5;
+	std::string ifile;
+	std::string ofile;
+	if (xy == X) { unb = -0.3330; ifile = "_Solutions.txt"; ofile = "_Surface.txt"; }
+	if (xy == Y) { unb = -0.1665; ifile = "_YSolutions.txt"; ofile = "_YSurface.txt"; }
+	Formatting f(n, mt, t, d, res, xy, upb, unb, ifile, ofile);
+	f.uniformField();*/
+	//ofstream out("_FLI.txt");
+	//f.checkbounds(out);
+	Vec_DP y(4);
+	y[0] = 90 * c; y[1] = 180 * c; y[2] = 0.0204677; y[3] = 0.176893868;
+	//callIntegrate(getIC(-0.010000000615014493, 0.176893868, Y), 1000, true, pow(10, -5));
+	callIntegrate(y, 50, true);
+	//cout << renormalize(y, 1000, true, pow(10, -5), 100);
+	//cout << setprecision(17) << E(y);
+	return 0;
+}
